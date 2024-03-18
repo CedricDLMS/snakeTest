@@ -1,16 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more informatio
 using snakeTest1.Classe;
 
-Display ecran = new Display(20,40);
+Display ecran = new Display(30, 50);
+Snake snake = new Snake();
 
+snake.snakeInit(ecran.maxHeight, ecran.maxWidth);
 ecran.DisplayInitSize();
+ecran.intsInnit();
+ecran.displayConvert();
 
+ecran.coordinateDisplayInts[snake.xPosHead, snake.yPosHead] = 1;
+ecran.displayConvert();
 
-for (int i = 0;i < 20; i++)
+while (true)
 {
-    Console.WriteLine();
-    for (int j = 0;j < 40; j++)
-    {
-        Console.Write($" {ecran.coordinateDisplayInts[i,j]}");
-    }
+    ecran.afficherEcran();
+    snake.snakeInput(Console.ReadKey());
+    ecran.coordinateDisplayInts[snake.xPosHead, snake.yPosHead] = 1;
+    ecran.displayConvert();
+    Console.Clear();
 }
