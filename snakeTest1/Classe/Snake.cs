@@ -19,9 +19,10 @@ namespace snakeTest1.Classe
         }
         public void snakeInput(ConsoleKeyInfo consoleKey) 
         {
+            
             if(consoleKey.Key == ConsoleKey.UpArrow)
             {
-                 MoveUp();
+                MoveUp();
             }
             if (consoleKey.Key == ConsoleKey.DownArrow)
             {

@@ -14,9 +14,9 @@ ecran.displayConvert();
 
 while (true)
 {
-    ecran.afficherEcran();
-    snake.snakeInput(Console.ReadKey());
-    ecran.coordinateDisplayInts[snake.xPosHead, snake.yPosHead] = 1;
-    ecran.displayConvert();
     Console.Clear();
+    ecran.afficherEcran();
+    var key = Console.ReadKey();
+    snake.snakeInput(key);
+    ecran.coordinateDisplayInts[snake.xPosHead, snake.yPosHead] = 1;
 }

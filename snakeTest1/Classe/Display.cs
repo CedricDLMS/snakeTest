@@ -24,7 +24,7 @@ namespace snakeTest1.Classe
         {
             for (int i = 0; i < this.coordinateDisplayInts.GetLength(0); i++)
             {
-                for (int j = 0;j<this.coordinateDisplayInts.GetLength(1); j++)
+                for (int j = 0; j < this.coordinateDisplayInts.GetLength(1); j++)
                 {
                     if (i == 0 || i == this.maxHeight - 1 || j == 0 || j == this.maxWidth - 1)
                     {
@@ -50,17 +50,18 @@ namespace snakeTest1.Classe
                         coordinateDisplayS[i, j] = "#";
                     }
                     // creer le vide quand int = 0
-                    if (coordinateDisplayInts[i,j] == 0)
+                    if (coordinateDisplayInts[i, j] == 0)
                     {
                         coordinateDisplayS[i, j] = " ";
                     }
                 }
             }
         }
-        
+
         public void afficherEcran()
         {
-            Console.Clear();
+            displayConvert();
+            
             for (int i = 0; i < maxHeight; i++)
             {
                 for (int j = 0; j < (maxWidth); j++)
@@ -74,7 +75,7 @@ namespace snakeTest1.Classe
 
         // Constructeurs 
         public Display() { }
-        public Display(int MaxHeight,int MaxWidth)
+        public Display(int MaxHeight, int MaxWidth)
         {
             this.maxHeight = MaxHeight;
             this.maxWidth = MaxWidth;
